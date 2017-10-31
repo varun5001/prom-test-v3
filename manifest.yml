@@ -1,0 +1,15 @@
+---
+declared-services:
+  Conversation-2z:
+    label: conversation
+    plan: free
+applications:
+- name: demo-1-1
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - Conversation-2z
+  env:
+    NPM_CONFIG_PRODUCTION: false
